@@ -1,1 +1,35 @@
 
+<mat-toolbar >
+
+    <div>
+        <a class="nav_logo" routerLink="/home"> <span style="font-size: 40px;"><i class="fab fa-maxcdn"></i></span>usivibe</a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" style="margin-right: 100px;" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a routerLink="/about">About Us</a>
+            </li>
+            <li>
+                <a routerLink="/contact">Contacts</a>
+            </li>
+            <a class="v1" href="/"> </a>
+
+            <li>
+                <a routerLink="/signup">Sign up</a>
+            </li>
+            <li>
+                <a routerLink="/login">Log in</a>
+
+            </li>
+
+        </ul>
+    </div>
+ 
+
+    <div fxHide.gt-xs fxLayoutAlign="end" fxFlex >
+      <button  mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon class="text-white">menu</mat-icon>
+      </button>
+  </div>
+  </mat-toolbar>
+  
