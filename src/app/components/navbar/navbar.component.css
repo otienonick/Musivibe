@@ -1,0 +1,41 @@
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+a:hover, a:active{
+    color:rgb(210, 203, 10);
+}
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+mat-toolbar{
+    border-radius: 3px;
+}
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}
+mat-toolbar{
+    border-radius: 0;
+    background-color: rgba(0,0, 0, 1);
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+
+
+}
+
+.v1{
+    border-left: 2px solid #fff;
+    height: 35px;
+
+}
+li{
+    font-size: 14px;
+}
+.nav_logo{
+    font-size: 26px;
+    
+}
