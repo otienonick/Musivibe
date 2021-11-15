@@ -1,4 +1,7 @@
+
 import { UserService } from 'src/app/services/user.service';
+
+
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -8,9 +11,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
     @Output() sidenavClose = new EventEmitter();
+
     // isAuthenticated: boolean;
 
   
+
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -19,9 +26,12 @@ export class SidenavComponent implements OnInit {
     this.sidenavClose.emit();
   }
 
+
   // isLoggedIn() {
   //   this.isAuthenticated = this.userService.isLoggedIn();
   //   return this.isAuthenticated;
   // }
+
+
 
 }

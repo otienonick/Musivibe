@@ -2,7 +2,11 @@
 <mat-toolbar >
 
     <div>
+
         <a class="nav_logo" routerLink="#"> <span style="font-size: 40px;"><i class="fab fa-maxcdn"></i></span>usivibe</a>
+
+        <a class="nav_logo" routerLink="/home"> <span style="font-size: 40px;"><i class="fab fa-maxcdn"></i></span>usivibe</a>
+
     </div>
     <div fxFlex fxLayout fxLayoutAlign="end" style="margin-right: 100px;" fxHide.xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
@@ -13,6 +17,7 @@
                 <a routerLink="/contact">Contacts</a>
             </li>
             <a class="v1" href="/"> </a>
+
             <span  *ngIf="currentUser" class="text-white fs-2"> 
                <a href=""> <i class="fas fa-user-circle"></i></a>
                </span> 
@@ -27,6 +32,13 @@
                 <a routerLink="/signup">Sign up</a>
             </li>
             <li   *ngIf="currentUser == null">
+
+
+            <li>
+                <a routerLink="/signup">Sign up</a>
+            </li>
+            <li>
+
                 <a routerLink="/login">Log in</a>
 
             </li>
