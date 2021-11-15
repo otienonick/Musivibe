@@ -16,6 +16,11 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SearchComponent } from './components/search/search.component';
+import { ArtistComponent } from './components/artist/artist.component';
+import { AlbumComponent } from './components/album/album.component';
+import { TrackComponent } from './components/track/track.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,7 +28,11 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    SidenavComponent
+    SidenavComponent,
+    SearchComponent,
+    ArtistComponent,
+    AlbumComponent,
+    TrackComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +45,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatButtonModule,
     MatListModule,
     FlexLayoutModule,
+    HttpClientModule,
 
 
 
