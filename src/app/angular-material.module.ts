@@ -33,6 +33,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSliderModule } from '@angular/material/slider';
+
 const materialModules = [
   CdkTreeModule,
   MatAutocompleteModule,
@@ -68,6 +69,7 @@ const materialModules = [
   MatTooltipModule,
   MatSliderModule
 ];
+
 @NgModule({
   imports: [
     CommonModule,
@@ -77,4 +79,5 @@ const materialModules = [
     ...materialModules
   ],
 })
+
 export class AngularMaterialModule { }

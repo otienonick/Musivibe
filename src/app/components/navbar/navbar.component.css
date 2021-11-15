@@ -1,10 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Road+Rage&family=Roboto:wght@300&family=Yuji+Boku&display=swap');
+
 a {
     text-decoration: none;
     color: white;
     font-weight: 700;
+
+
+}
+a:hover, a:active{
+    color: #e91e63;
+}
+
+button{
+    background:#e91e63 !important ;
+
 }
 a:hover, a:active{
     color: #E91E63;
+
 }
 .navigation-items{
     list-style-type: none;
@@ -23,14 +37,30 @@ mat-toolbar{
     border-radius: 0;
     background-color:rgb(3, 3, 65);
     font-family: spotify-circular, Helvetica, Arial, sans-serif;
+
+
+
+}
+
+.v1{
+    border-left: 2px solid #fff;
+    height: 35px;
+
+
 }
 .v1{
     border-left: 2px solid #fff;
     height: 35px;
+
 }
 li{
     font-size: 14px;
 }
 .nav_logo{
     font-size: 26px;
+
+    font-family: 'Yuji Boku', serif !important;
+    
+
+
 }

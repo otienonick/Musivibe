@@ -5,6 +5,16 @@
     <a mat-list-item routerLink="/about" (click)="onSidenavClose()">
         <i class="fas fa-users"></i><span class="nav-caption">About Us</span>   
     </a>
+
+    <a mat-list-item routerLink="/contact" (click)="onSidenavClose()">
+        <mat-icon> comment</mat-icon> <span class="nav-caption">Contact Us</span>
+    </a>
+    <hr>
+    <a mat-list-item routerLink="/signup" (click)="onSidenavClose()">
+        <i class="fas fa-user-plus"></i><span class="nav-caption">Sign Up</span>
+        </a>
+    <a mat-list-item routerLink="/login" (click)="onSidenavClose()">
+
     <a mat-list-item routerLink="#" (click)="onSidenavClose()">
         <mat-icon> comment</mat-icon> <span class="nav-caption">Contact Us</span>
     </a>
@@ -13,8 +23,21 @@
         <i class="fas fa-user-plus"></i><span class="nav-caption">Sign Up</span>
         </a>
     <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+
     <i class="fas fa-sign-in-alt"></i>
     <span class="nav-caption">Sign In</span>
     </a>
+
+
+    <mat-list-item  [matMenuTriggerFor]="menu">
+        <mat-icon>unfold_more</mat-icon>
+        <a matline>Profile</a>
+    </mat-list-item>
+    <mat-menu  #menu="matMenu">
+      <button mat-menu-item (click)="onSidenavClose()">Profile</button>
+      <button mat-menu-item (click)="onSidenavClose()">Logout</button>
+    </mat-menu>
+
+
 
   </mat-nav-list>
