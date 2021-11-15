@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Road+Rage&family=Roboto:wght@300&family=Yuji+Boku&display=swap');
 a {
     text-decoration: none;
     color: white;
     font-weight: 700;
+
 }
 a:hover, a:active{
     color: #e91e63;
@@ -41,5 +43,6 @@ li{
 }
 .nav_logo{
     font-size: 26px;
+    font-family: 'Yuji Boku', serif !important;
     
 }

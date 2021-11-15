@@ -18,6 +18,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { AboutpageComponent } from './components/aboutpage/aboutpage.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     SidenavComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    AboutpageComponent
   ],
   imports: [
     BrowserModule,
