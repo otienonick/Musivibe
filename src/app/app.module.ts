@@ -2,16 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
-// Angular Material 
+// Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 
-// Routing 
+// Routing
 import { AppRoutingModule } from './app-routing.module';
 
-// Components 
+  // Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -19,7 +18,11 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AboutpageComponent } from './components/aboutpage/aboutpage.component';
-
+import { SearchComponent } from './components/search/search.component';
+import { ArtistComponent } from './components/artist/artist.component';
+import { AlbumComponent } from './components/album/album.component';
+import { TrackComponent } from './components/track/track.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,11 @@ import { AboutpageComponent } from './components/aboutpage/aboutpage.component';
     SidenavComponent,
     RegisterComponent,
     LoginComponent,
-    AboutpageComponent
+    AboutpageComponent,
+    SearchComponent,
+    ArtistComponent,
+    AlbumComponent,
+    TrackComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +47,9 @@ import { AboutpageComponent } from './components/aboutpage/aboutpage.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FlexLayoutModule,
+    HttpClientModule,
+    AngularMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
