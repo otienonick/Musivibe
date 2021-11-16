@@ -4,8 +4,7 @@
         <mat-card-title>Sign Up</mat-card-title>
       </mat-card-header>
   
-      <form class="example-form">
-  
+      <form #form = 'ngForm' (ngSubmit)='registerUser()'  class="example-form">
         <mat-card-content>
           <mat-form-field class="example-full-width">
             <input  [(ngModel)]='register.username' matInput placeholder="Username" [formControl]="username" required>
@@ -36,7 +35,7 @@
           </section>
         </mat-card-content>
   
-        <button (click)='registerUser()' mat-raised-button style="background: #e91e63; color: #fff;" class="btn-block">Register</button>
+        <button type="submit" mat-raised-button style="background: #e91e63; color: #fff;" class="btn-block">Register</button>
       </form>
       
       <div class="mt-3">
