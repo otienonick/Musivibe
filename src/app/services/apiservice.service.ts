@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiserviceService {
   
-  private authorizationKey='Bearer BQBlDbiczqm7eJE0fT16YlOrWcTsppyFjOHiVSgdUoZMVEowGFlzG5MOsVoCjgg5WQ0lQKUtuAlOyPH64htsXnC8pVStgmCciMpU0DbJCjTCqnj0JePgzFXGjLReAAY1NCMDkFbrDygWi6Z9-sSC6k0QZd_wL3w';
+  private authorizationKey='Bearer BQCZq9ISPd6lvlNoa7bYsURPdsVmRb0j8rnZMb6y3OjlzgF7KemznhBAPZ8fOyZte-e-myjabLtTTDkSYVZ2MrasexyclbyL8D5OwqDYFAGVEyU5Q0gtaot4A9PV7A8yab1rFw1EN500-2-XV-rEyoeVd8iDC1w';
  
   private httpOptions={
     headers: new HttpHeaders({
@@ -21,7 +21,7 @@ export class ApiserviceService {
  
 
   public getallTracks():Observable<any>{
-    let trackUrl='https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF';
-    return this.httpclient.get(trackUrl,this.httpOptions);
+    let trackUrl='https://corsanywhere.herokuapp.com/http://api.deezer.com/chart/0/tracks';
+    return this.httpclient.get(trackUrl);
   }
 }

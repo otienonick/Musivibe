@@ -11,12 +11,11 @@ export class TrackComponent implements OnInit {
   constructor(private spotifyService:ApiserviceService) { }
 
   ngOnInit(): void {
+    this.spotifyService.getallTracks().subscribe((results:any) => {
+      this.tracks = results.data;
+      console.log(this.tracks)
+    });
   }
 
-  getTracks(){
-    this.spotifyService.getallTracks().subscribe((response:any) => {
-       this.tracks = response.data;
-      console.log(response)
-     });
-   }
+  
 }
