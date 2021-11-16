@@ -2,13 +2,21 @@
    
     <div class="container">
         <h1 class="text-center" style="color: white;">Top Songs</h1>
+        
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4" style="color:white;background-color:rgb(3, 3, 65)">
+              <div class="col">Charts</div>
+              <div class="col">Artists</div>
+              <div class="col">Genres</div>
+              <div class="col">Playlists</div>
+            </div>
+          
         <div class="card-body">
             
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" *ngFor="let track of tracks">
                     <div class="card mt-3">
                         <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);">
-                            <p class="lead">Track Name</p>
+                            <p class="lead">{{track.name}}</p>
                             <audio controls>
                                 <source src="">
                             </audio>

@@ -1,6 +1,5 @@
 
 import { UserService } from './../../services/user.service';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -15,7 +14,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class NavbarComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
 
-  currentUser: null;
+  currentUser= false;
   selected = 'option2';  
 
   constructor(private userService:UserService, private router: Router) { 
@@ -34,14 +33,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(){
-
-
-
-  constructor() { }
-  public onToggleSidenav = () => {
-    this.sidenavToggle.emit();
-  }
-
+    this.currentUser=true;
 
   }
 

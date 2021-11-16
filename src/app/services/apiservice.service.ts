@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -7,14 +7,21 @@ import { Observable } from 'rxjs';
 })
 export class ApiserviceService {
   
-  
+  private authorizationKey='Bearer BQBlDbiczqm7eJE0fT16YlOrWcTsppyFjOHiVSgdUoZMVEowGFlzG5MOsVoCjgg5WQ0lQKUtuAlOyPH64htsXnC8pVStgmCciMpU0DbJCjTCqnj0JePgzFXGjLReAAY1NCMDkFbrDygWi6Z9-sSC6k0QZd_wL3w';
  
+  private httpOptions={
+    headers: new HttpHeaders({
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Authorization': 'this.authorizationKey'
+    })
+  };
   constructor(private httpclient:HttpClient) { }
 
  
 
-  public getTracks():Observable<any>{
-    let trackUrl='http://api.deezer.com/chart/0/tracks';
-    return this.httpclient.get<any>(trackUrl);
+  public getallTracks():Observable<any>{
+    let trackUrl='https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF';
+    return this.httpclient.get(trackUrl,this.httpOptions);
   }
 }

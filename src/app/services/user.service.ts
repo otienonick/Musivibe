@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import {  BehaviorSubject,Observable } from 'rxjs';
-import { LocalStorageService } from 'angular-2-local-storage';
+
 
 
 @Injectable({
@@ -9,7 +9,7 @@ import { LocalStorageService } from 'angular-2-local-storage';
 })
 export class UserService {
 
-  isLoggedin: boolean = false;
+  
 
   private currentUserSubject: BehaviorSubject<any>;
   public currentUser: Observable<any>;
