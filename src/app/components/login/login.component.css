@@ -1,11 +1,4 @@
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
 .app-header {
   justify-content: space-between;
   position: fixed;
@@ -22,7 +15,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0;
+
   
 }
 
@@ -95,7 +88,7 @@
 }
 
 .login-wrapper .mat-card {
-  padding: 40px 70px 50px;
+  padding: 40px 70px 50px !important;
 }
 
 .login-wrapper .mat-stroked-button {
@@ -105,7 +98,7 @@
 }
 
 .login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
-  padding: 0.8375em 0;
+  padding: 0.8375em 0 !important;
 }
 
 .mt-3 a{

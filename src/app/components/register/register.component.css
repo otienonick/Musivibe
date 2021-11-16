@@ -36,6 +36,12 @@
     z-index: -1;
   }
   
+  .box {
+    padding: auto !important;
+
+  }
+  
+
   .mt-3 a{
     color: #d63384;
     font-weight: 700;
