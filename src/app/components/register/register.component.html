@@ -25,6 +25,7 @@
             <mat-label>Enter your password</mat-label>
               <input [(ngModel)]='register.password' matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required>
               <mat-error *ngIf="password.invalid">{{passwordErrorMessage()}}</mat-error>
+
               <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button>

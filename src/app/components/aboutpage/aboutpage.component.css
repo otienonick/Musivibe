@@ -14,7 +14,11 @@ h1, h2,h5{
     color:rgb(3, 3, 65);
 
 }
-.fas{
+.container-fluid a{
+    font-weight: 700;
+}
+
+.container-fluid .fas{
     font-size: 14rem;
     color: #e91e63;
 }
