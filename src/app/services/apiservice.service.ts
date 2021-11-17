@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiserviceService {
   
-  private authorizationKey='Bearer BQCZq9ISPd6lvlNoa7bYsURPdsVmRb0j8rnZMb6y3OjlzgF7KemznhBAPZ8fOyZte-e-myjabLtTTDkSYVZ2MrasexyclbyL8D5OwqDYFAGVEyU5Q0gtaot4A9PV7A8yab1rFw1EN500-2-XV-rEyoeVd8iDC1w';
+  private authorizationKey='Bearer ';
  
   private httpOptions={
     headers: new HttpHeaders({
@@ -23,5 +23,10 @@ export class ApiserviceService {
   public getallTracks():Observable<any>{
     let trackUrl='https://corsanywhere.herokuapp.com/http://api.deezer.com/chart/0/tracks';
     return this.httpclient.get(trackUrl);
+  }
+
+  public getallGenre():Observable<any>{
+    let genreUrl='https://corsanywhere.herokuapp.com/https://api.deezer.com/genre/';
+    return this.httpclient.get(genreUrl);
   }
 }

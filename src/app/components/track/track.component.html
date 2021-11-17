@@ -4,23 +4,64 @@
         <div class="col">
             <pre></pre>
         </div>
-        <h1 class="text-center" style="color: white;">Top Songs</h1>
-        
+               
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4" style="color:white;background-color:rgb(3, 3, 65)">
               <div class="col">Charts</div>
               <div class="col">Artists</div>
               <div class="col">Genres</div>
               <div class="col">Playlists</div>
             </div>
+            <div class="container" style="padding: 2%;" ><a href=""id="genre" style="color:white;font-size:large">Genres<i class="chevron right icon"></i></a></div>
+            <div class="container">
+                <div class="ui cards">
+                    <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
+                      <div class="content">
+                        <div class="header" style="color: white;">Country</div>                       
+                      </div>
+                      <div class="ui bottom attached button">
+                        <a href="#"><i class="tripadvisor icon"></i>
+                            View Country</a>
+                        
+                      </div>
+                    </div>
+                    <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
+                      <div class="content">
+                        <div class="header" style="color: white;">Pop</div>                      
+                      </div>
+                      <div class="ui bottom attached button">
+                        <i class="tripadvisor icon"></i>
+                        View Pop
+                      </div>
+                    </div>
+                    <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
+                      <div class="content">
+                        <div class="header" style="color: white;">Bongo</div>
+                      </div>
+                      <div class="ui bottom attached button">
+                        <i class="tripadvisor icon"></i>
+                        View Bongo
+                      </div>
+                    </div>
+                    <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
+                        <div class="content">
+                          <div class="header" style="color: white;">HipHop</div> 
+                        </div>
+                        <div class="ui bottom attached button">
+                          <i class="tripadvisor icon"></i>
+                          View Hiphop
+                        </div>
+                      </div>
+                  </div>
+            </div>
             <div class="container text-center" style="padding:1%">
                 <button type="button" class="btn btn-lg" id="top" style="background-color: #E91E63;margin:2%;color:white;">Top songs</button>
                 <button type="button" class="btn btn-lg" id="rec" style="background-color: #E91E63;color: white;">Recommended</button>
             </div>
 
-            <div id="mine" style="visibility:hidden">Lorem ipsum</div>
-          
-        <div class="card-body" id="tracks">
+            <div class="text-center" id="mine" style="visibility:hidden;color: white;">Lorem ipsum</div>
             
+        <div class="card-body" id="tracks">
+            <h1 class="text-center" style="color: white;">Top Songs</h1>
             <div class="row">
                 <div class="col-md-4" *ngFor="let track of tracks">
                     <div class="card mt-3">
@@ -35,20 +76,23 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
 </section>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script>
-$(document).ready(function(){
-  $('#top').on('click', function(){
-    $('#tracks').show(500);
-    $('#mine').hide();
-  });
-  $('#rec').on('click', function(){
-    $('#tracks').hide();
-    $('#mine').show(500);
-  });
-});
-console.log('Hi')
-</script>
+  <script>
+    $(document).ready(function(){
+      $('#top').on('click', function(){
+        $('#tracks').show(500);
+        $('#mine').hide();
+      });
+      $('#rec').on('click', function(){
+        $('#tracks').hide();
+        $('#mine').show(500);
+      });
+    });
+    console.log('Hi')
+    </script>
+
+
+

@@ -26,6 +26,7 @@ import { TrackComponent } from './components/track/track.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiserviceService } from './services/apiservice.service';
 import { FooterComponent } from './components/footer/footer.component';
+import { GenreComponent } from './components/genre/genre.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ArtistComponent,
     AlbumComponent,
     TrackComponent,
-    FooterComponent
+    FooterComponent,
+    GenreComponent
 
   ],
   imports: [
