@@ -23,6 +23,7 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { AlbumComponent } from './components/album/album.component';
 import { TrackComponent } from './components/track/track.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     SearchComponent,
     ArtistComponent,
     AlbumComponent,
-    TrackComponent
+    TrackComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

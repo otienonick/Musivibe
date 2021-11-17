@@ -12,6 +12,8 @@ export class NavbarComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
   currentUser = false;
   selected = 'option2';  
+  
+
 
   constructor(private userService:UserService, private router: Router) { 
     this.userService.currentUser.subscribe(x => this.currentUser = x);

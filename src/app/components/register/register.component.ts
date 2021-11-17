@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 
@@ -11,55 +12,34 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  email = new FormControl('', [Validators.required, Validators.email]);
-  username = new FormControl('', [Validators.required]);
-  password = new FormControl('', [Validators.required,Validators.minLength(6),],);
+  registerForm:FormGroup;
+  isRegistrationInProcess:boolean = false;
+  username:FormControl;
+  email:FormControl;
+  password:FormControl;
+  errorList:string[]
   hide = true;
   register:any;
 
 
-  emailErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'Email is required';
-    }
- 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
-
-  usernameErrorMessage(){
-       if (this.username.hasError('required')) {
-      return 'Username is required';
-    }
-    return this.username.hasError('username is reuired');
-
-  }
-
-  passwordErrorMessage(){
-    if (this.password.hasError('required')) {
-   return 'password is required';
- }
-  if(this.password.hasError('minLength')){
-  return 'password must be atleast six characters';
-
- }
- return this.username.hasError('password must be atleast six characters');
-
-}
-
-  constructor(private userService:UserService){}
+constructor(private fb:FormBuilder,private userService:UserService,private router:Router) { }
 
   ngOnInit(){
-    this.register = {
-      username:'',
-      password:'',
-      email:''
-    };
+    this.username = new FormControl('',[Validators.required,Validators.minLength(4),Validators.maxLength(10)]);
+    this.email = new FormControl('',[Validators.required,Validators.email]);
+    this.password = new FormControl('',[Validators.required,Validators.minLength(5)]);
 
+
+    this.registerForm = this.fb.group({
+      username:this.username,
+      email:this.email,
+      password:this.password,
+    })
   }
   registerUser(){
     this.userService.registerNewUser(this.register).subscribe(
       response => {
-        window.location.href = 'home.component.html'
+        this.router.navigate(['/home'])
       });
 
   }
