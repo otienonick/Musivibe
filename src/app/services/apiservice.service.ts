@@ -29,4 +29,8 @@ export class ApiserviceService {
     let genreUrl='https://corsanywhere.herokuapp.com/https://api.deezer.com/genre/';
     return this.httpclient.get(genreUrl);
   }
+  public getallArtists():Observable<any>{
+    let artistUrl='https://corsanywhere.herokuapp.com/https://api.deezer.com/artist/27';
+    return this.httpclient.get(artistUrl);
+  }
 }
