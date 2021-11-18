@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 
@@ -9,44 +10,43 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  username = new FormControl('', [Validators.required]);
-  password = new FormControl('', [Validators.required]);
+  loginForm:FormGroup
+  username:FormControl
+  password:FormControl
+  errorMessage:string
   hide = true;
-  login: any;
   error=false;
+  invalidLogin:boolean
+  notLogged=false
 
 
-  getErrorMessage() {
-    if (this.username.hasError('required')) {
-      return 'You must enter a value';
-
-    } else if (this.password.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return 'You must enter a value';
-  }
 
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+    private router: Router,
+    private fb:FormBuilder,) { }
 
   ngOnInit() {
-    this.login = {
-      username: '',
-      password: '',
-    };
+    this.username = new FormControl('',[Validators.required]);
+    this.password = new FormControl('',[Validators.required]);
+
+    this.loginForm = this.fb.group({
+      username:this.username,
+      password:this.password,
+    });
   }
 
-  loginUser() {
-    this.userService.loginUser(this.login).subscribe(
-      response => {
-        console.log(response)
-        window.location.href = 'home.component.html'
-      },
-      errorRespnose => { this.error = true }
-    );
+  loginUser(){
+    let userLogin = this.loginForm.value;
+    this.userService.login(userLogin.username,userLogin.password)
+    .subscribe(result =>{
+      this.invalidLogin = false;
+      this.router.navigate(['/home'])
+      console.log(userLogin.username)
 
+    },error=>{
+      this.notLogged = true
+    })
   }
 
 

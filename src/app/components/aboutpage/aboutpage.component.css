@@ -14,6 +14,10 @@ h1, h2,h5{
     color:rgb(3, 3, 65);
 
 }
+.container-fluid a{
+    font-weight: 700;
+}
+
 .container-fluid .fas{
     font-size: 14rem;
     color: #e91e63;
@@ -49,11 +53,26 @@ h1, h2,h5{
 }
 .btns a:hover span{
     width: 100%;
-} 
+}
+.images p{
+    position: absolute;
+     height: 100%;
+      width: 100%; 
+      top:45%;
+      color: white;
+      font-size: 1.8rem;
+}
 
+.images{
+    position: relative;
+}
+.text-center img{
+    transition: all 0.3s ease;
+}
 
+.text-center img:hover{
+    filter: brightness(40%);
+    cursor: pointer;
+    transform: scale(1.05);
 
-
-
-
-
+}
