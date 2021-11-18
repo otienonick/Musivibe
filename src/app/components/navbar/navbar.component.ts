@@ -25,7 +25,6 @@ export class NavbarComponent implements OnInit {
   logout() {
     this.userService.logout();
     this.router.navigate(['/login']);
-    this.currentUser = false
 
 
   }
@@ -36,7 +35,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.currentUser = false
+    this.currentUser = true
 
   }
 

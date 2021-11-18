@@ -20,17 +20,17 @@
             <span  *ngIf="currentUser" class="text-white fs-2"> 
                <a href=""> <i class="fas fa-user-circle"></i></a>
                </span> 
-    <li *ngIf="currentUser == true">
+    <li *ngIf="currentUser">
             <mat-select style="color: white;" [(value)]="selected">
               <mat-option style="background: navy;" ><a routerLink="/contact">Profile</a> </mat-option>
               <mat-option style="background: navy;" (click)="logout()"  value="option2"> <a routerLink="/login">logout</a></mat-option>
             </mat-select>
     </li>
    
-            <li  *ngIf="currentUser == false" >
+            <li  *ngIf="currentUser == null" >
                 <a routerLink="/signup">Sign up</a>
             </li>
-            <li   *ngIf="currentUser == false">
+            <li   *ngIf="currentUser == null">
 
                 <a routerLink="/login">Log in</a>
 
