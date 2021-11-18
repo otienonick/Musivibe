@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   password:FormControl
   errorMessage:string
   hide = true;
-  error=false;
   invalidLogin:boolean
   notLogged=false
 
@@ -50,4 +49,4 @@ export class LoginComponent implements OnInit {
   }
 
 
-
+}
