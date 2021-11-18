@@ -33,4 +33,8 @@ export class ApiserviceService {
     let artistUrl='https://corsanywhere.herokuapp.com/https://api.deezer.com/artist/27';
     return this.httpclient.get(artistUrl);
   }
+  public getspotifyRec(query:string):Observable<any>{
+    let spotifUrl=`https://jive21.herokuapp.com/api/ai/${query}`;
+    return this.httpclient.get(spotifUrl);
+  }
 }
