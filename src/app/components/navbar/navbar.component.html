@@ -2,7 +2,6 @@
 <mat-toolbar >
 
     <div>
-
         <a class="nav_logo" routerLink="/home"> <span style="font-size: 40px;"><i class="fab fa-maxcdn"></i></span>usivibe</a>
 
     </div>
@@ -26,10 +25,12 @@
             </mat-select>
     </li>
    
-            <li  *ngIf="currentUser == null">
+
+            <li  *ngIf="currentUser == null" >
                 <a routerLink="/signup">Sign up</a>
             </li>
             <li   *ngIf="currentUser == null">
+
                 <a routerLink="/login">Log in</a>
 
         </ul>

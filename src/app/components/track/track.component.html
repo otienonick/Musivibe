@@ -1,45 +1,45 @@
 <section class="p-3">
    
-    <div class="container-fluid" style="background-image: url(https://images.unsplash.com/photo-1614149162883-504ce4d13909?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);background-position: center;background-repeat: no-repeat;background-size: cover;background: transparent;">
-               
-            <div class="container" style="padding: 2%;" ><a href="https://www.deezer.com/en/channels/explore"id="genre" style="color:white;font-size:large">Genres<i class="chevron right icon"></i></a></div>
-            <div class="container">
-                <div class="ui cards">
-                    <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
+  <div class="container-fluid" style="background-image: url(https://images.unsplash.com/photo-1614149162883-504ce4d13909?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);background-position: center;background-repeat: no-repeat;background-size: cover;background: transparent;">
+             
+          <div class="container" style="padding: 2%;" ><a href="https://www.deezer.com/en/channels/explore"id="genre" style="color:white;font-size:large">Genres<i class="chevron right icon"></i></a></div>
+          <div class="container">
+              <div class="ui cards">
+                  <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
+                    <div class="content">
+                      <div class="header" style="color: white;">Country</div>                       
+                    </div>
+                    <div class="ui bottom attached button">
+                      <a href="https://www.deezer.com/en/channels/country"><i class="tripadvisor icon"></i>
+                          View Country</a>                        
+                    </div>
+                  </div>
+                  <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
+                    <div class="content">
+                      <div class="header" style="color: white;">Pop</div>                      
+                    </div>
+                    <div class="ui bottom attached button">
+                     <a href="https://www.deezer.com/en/channels/pop"> <i class="tripadvisor icon"></i>
+                      View Pop</a>
+                    </div>
+                  </div>
+                  <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
+                    <div class="content">
+                      <div class="header" style="color: white;">African Music</div>
+                    </div>
+                    <div class="ui bottom attached button">
+                     <a href="https://www.deezer.com/en/channels/african"> <i class="tripadvisor icon"></i>
+                      View African Music</a>
+                    </div>
+                  </div>
+                  <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
                       <div class="content">
-                        <div class="header" style="color: white;">Country</div>                       
+                        <div class="header" style="color: white;">HipHop</div> 
                       </div>
                       <div class="ui bottom attached button">
-                        <a href="https://www.deezer.com/en/channels/country"><i class="tripadvisor icon"></i>
-                            View Country</a>                        
+                       <a href="https://www.deezer.com/en/channels/rap"> <i class="tripadvisor icon"></i>
+                          View Hiphop</a>
                       </div>
-                    </div>
-                    <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
-                      <div class="content">
-                        <div class="header" style="color: white;">Pop</div>                      
-                      </div>
-                      <div class="ui bottom attached button">
-                       <a href="https://www.deezer.com/en/channels/pop"> <i class="tripadvisor icon"></i>
-                        View Pop</a>
-                      </div>
-                    </div>
-                    <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
-                      <div class="content">
-                        <div class="header" style="color: white;">African Music</div>
-                      </div>
-                      <div class="ui bottom attached button">
-                       <a href="https://www.deezer.com/en/channels/african"> <i class="tripadvisor icon"></i>
-                        View African Music</a>
-                      </div>
-                    </div>
-                    <div class="card" style="background: linear-gradient(to right bottom,blue,red);">
-                        <div class="content">
-                          <div class="header" style="color: white;">HipHop</div> 
-                        </div>
-                        <div class="ui bottom attached button">
-                         <a href="https://www.deezer.com/en/channels/rap"> <i class="tripadvisor icon"></i>
-                            View Hiphop</a>
-                        </div>
                       </div>
                   </div>
             </div>
@@ -62,34 +62,36 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card-body" style="color: white;display: none;" id="mine">
-            <h1 class="text-center" style="color: white;">For you</h1>            
-            <div class="ui loading search text-center">
-                <div class="ui icon input">
-                  <input class="prompt" type="text"  #spotrec (keyup.enter)="getspotifyrecs(spotrec.value)" placeholder="Your playlist name.." style="border-color: #E91E63;font-weight:500 ;">
-                  <i class="search icon"></i>
-                </div>
-                <div class="results"></div>
+          </div>
+         
+      <div class="card-body" style="color: white;display: none;" id="mine">
+          <h1 class="text-center" style="color: white;">For you</h1>            
+          <div class="ui loading search text-center">
+              <div class="ui icon input">
+                <input class="prompt" type="text"  #spotrec (keyup.enter)="getspotifyrecs(spotrec.value)" placeholder="Your playlist name.." style="border-color: #E91E63;font-weight:500 ;">
+                <i class="search icon"></i>
               </div>
-            <div class="row">
-                <div class="col-md-4" *ngFor="let song of reccommendations">
-                    <div class="card mt-3" style="border: none;">
-                        <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);">
-                            <div><img src="{{song.url}}" alt="" style="border-radius:50% ;"></div>
-                            <p class="lead">Title : {{song.track_name}}</p>
-                            <p>Artist : {{song.artist_name}}</p>
-                            <p>{{song.genre}}</p>                            
-                        </div>
-                    </div>
-                </div>
+              <div class="results"></div>
             </div>
-        </div>
+          <div class="row">
+              <div class="col-md-4" *ngFor="let song of reccommendations">
+                  <div class="card mt-3" style="border: none;">
+                      <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);">
+                          <div><img src="{{song.url}}" alt="" style="border-radius:50% ;"></div>
+                          <p class="lead">Title : {{song.track_name}}</p>
+                          <p>Artist : {{song.artist_name}}</p>
+                          <p>{{song.genre}}</p>                            
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-    </div>  
+  </div>  
 </section>
+
   
+
 
 
 

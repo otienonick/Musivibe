@@ -1,13 +1,12 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-// Angular Material 
+// Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
-
 // Routing 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -29,17 +28,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GenreComponent } from './components/genre/genre.component';
 import { ContactComponent } from './components/contact/contact.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     SidenavComponent,
-
     RegisterComponent,
     LoginComponent,
     AboutpageComponent,
-
     SearchComponent,
     ArtistComponent,
     AlbumComponent,
@@ -53,17 +51,12 @@ import { ContactComponent } from './components/contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
     AngularMaterialModule,
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
-    FlexLayoutModule,
-    HttpClientModule,
-    AngularMaterialModule,
-
+    
 
 
 
