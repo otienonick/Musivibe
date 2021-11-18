@@ -27,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiserviceService } from './services/apiservice.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { GenreComponent } from './components/genre/genre.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { GenreComponent } from './components/genre/genre.component';
     AlbumComponent,
     TrackComponent,
     FooterComponent,
-    GenreComponent
+    GenreComponent,
+    ContactComponent
 
   ],
   imports: [
