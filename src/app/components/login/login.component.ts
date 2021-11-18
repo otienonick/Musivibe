@@ -15,8 +15,10 @@ export class LoginComponent implements OnInit {
   password:FormControl
   errorMessage:string
   hide = true;
-  login: any;
   error=false;
+  invalidLogin:boolean
+  notLogged=false
+
 
 
 
@@ -34,15 +36,17 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  loginUser() {
-    this.userService.loginUser(this.login).subscribe(
-      response => {
-        console.log(response)
-        this.router.navigate(['/home']);
-      },
-      errorRespnose => { this.error = true }
-    );
+  loginUser(){
+    let userLogin = this.loginForm.value;
+    this.userService.login(userLogin.username,userLogin.password)
+    .subscribe(result =>{
+      this.invalidLogin = false;
+      this.router.navigate(['/home'])
+      console.log(userLogin.username)
 
+    },error=>{
+      this.notLogged = true
+    })
   }
 
 

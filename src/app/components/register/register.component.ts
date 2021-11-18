@@ -19,12 +19,12 @@ export class RegisterComponent implements OnInit {
   password:FormControl;
   errorList:string[]
   hide = true;
-  register:any;
 
 
 constructor(private fb:FormBuilder,private userService:UserService,private router:Router) { }
 
   ngOnInit(){
+
     this.username = new FormControl('',[Validators.required,Validators.minLength(4),Validators.maxLength(10)]);
     this.email = new FormControl('',[Validators.required,Validators.email]);
     this.password = new FormControl('',[Validators.required,Validators.minLength(5)]);
@@ -35,13 +35,22 @@ constructor(private fb:FormBuilder,private userService:UserService,private route
       email:this.email,
       password:this.password,
     })
-  }
-  registerUser(){
-    this.userService.registerNewUser(this.register).subscribe(
-      response => {
-        this.router.navigate(['/home'])
-      });
 
+  }
+
+  
+
+  registerUser(){
+    this.isRegistrationInProcess = true;
+
+    let userDetails = this.registerForm.value;
+    this.userService.register(userDetails.username,
+      userDetails.email,
+      userDetails.password).subscribe(result=>{
+        this.router.navigate(['/login'])
+      }
+
+      );
   }
 
 

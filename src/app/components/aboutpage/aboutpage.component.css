@@ -61,7 +61,6 @@ h1, h2,h5{
       top:45%;
       color: white;
       font-size: 1.8rem;
-
 }
 
 .images{
@@ -69,8 +68,8 @@ h1, h2,h5{
 }
 .text-center img{
     transition: all 0.3s ease;
-
 }
+
 .text-center img:hover{
     filter: brightness(40%);
     cursor: pointer;

@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
   currentUser = false;
+  // currentUser:null;
+
   selected = 'option2';  
   
 
@@ -23,6 +25,9 @@ export class NavbarComponent implements OnInit {
   logout() {
     this.userService.logout();
     this.router.navigate(['/login']);
+    this.currentUser = false
+
+
   }
 
 
@@ -31,7 +36,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.currentUser = true
+    this.currentUser = false
 
   }
 
