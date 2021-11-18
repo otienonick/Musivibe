@@ -37,4 +37,8 @@ export class ApiserviceService {
     let spotifUrl=`https://jive21.herokuapp.com/api/ai/${query}`;
     return this.httpclient.get(spotifUrl);
   }
+  public getdeezerRec(musician:string,song:string):Observable<any>{
+    let deezfUrl=`https://jive21.herokuapp.com/api/deezerai/${musician}/${song}`;
+    return this.httpclient.get(deezfUrl);
+  }
 }

@@ -43,7 +43,8 @@
           </div>
           <div class="container text-center" style="padding:1%">
               <button type="button" class="btn btn-lg" id="top" style="background-color: #E91E63;margin:2%;color:white;">Top songs</button>
-              <button type="button" class="btn btn-lg" id="rec" style="background-color: #E91E63;color: white;">Recommended</button>
+              <button type="button" class="btn btn-lg" id="rec" style="background-color: #E91E63;color: white;">Deezer Recommended</button>
+              <button type="button" class="btn btn-lg" id="dez" style="background-color: #E91E63;margin: 2%;color: white;">Spotify Recommended</button>
           </div>
       <div class="card-body" id="tracks">
           <h1 class="text-center" style="color: white;">Top Songs</h1>
@@ -63,25 +64,54 @@
       </div>
       <div class="card-body" style="color: white;display: none;" id="mine">
           <h1 class="text-center" style="color: white;">For you</h1>
-          <div class="ui loading search text-center">
-              <div class="ui icon input">
-                <input class="prompt" type="text"  #spotrec (keyup.enter)="getspotifyrecs(spotrec.value)" placeholder="Your playlist name.." style="border-color: #E91E63;font-weight:500 ;">
-                <i class="search icon"></i>
-              </div>
-              <div class="results"></div>
-            </div>
+        <div class="container">
+          <form #recoform="ngForm" (ngSubmit)="getdeezerecs(recoform.value)" novalidate>
+             <div class="form-group">
+               <label>Artist</label>
+               <input type="text" required class="form-control"  name="artist" ngModel>
+               <!-- <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small> -->
+             </div>
+             <div class="form-group">
+                 <label>Song</label>
+                 <input type="text" required class="form-control"  name="songname"  ngModel>
+                 <!-- <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small> -->
+               </div>
+         <br>
+             <button class="btn btn-primary" type="submit">Submit form</button>
+           </form>  
+          </div>        
+
           <div class="row">
-              <div class="col-md-4" *ngFor="let song of reccommendations">
+              <div class="col-md-4" *ngFor="let item of recos">
                   <div class="card mt-3" style="border: none;">
-                      <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);">
-                          <div><img src="{{song.url}}" alt="" style="border-radius:50% ;"></div>
-                          <p class="lead">Title : {{song.track_name}}</p>
-                          <p>Artist : {{song.artist_name}}</p>
-                          <p>{{song.genre}}</p>
+                      <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);">                          
+                          <p class="lead">Title : {{item.song}}</p>                                                   
                       </div>
                   </div>
               </div>
           </div>
       </div>
+      <div class="card-body" style="color: white;display: none;" id="mine2">
+        <h1 class="text-center" style="color: white;">For you</h1>
+        <div class="ui loading search text-center">
+            <div class="ui icon input">
+              <input class="prompt" type="text"  #spotrec (keyup.enter)="getspotifyrecs(spotrec.value)" placeholder="Your playlist name.." style="border-color: #E91E63;font-weight:500 ;">
+              <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+          </div>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let song of reccommendations">
+                <div class="card mt-3" style="border: none;">
+                    <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);">
+                        <div><img src="{{song.url}}" alt="" style="border-radius:50% ;"></div>
+                        <p class="lead">Title : {{song.track_name}}</p>
+                        <p>Artist : {{song.artist_name}}</p>
+                        <p>{{song.genre}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 </section>

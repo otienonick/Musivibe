@@ -10,6 +10,7 @@ import * as $ from 'jquery';
 export class TrackComponent implements OnInit {
   tracks: any[]=[];
   reccommendations:any[]=[];
+  recos: any[]=[];
   
   constructor(private spotifyService:ApiserviceService) { }
 
@@ -17,11 +18,18 @@ export class TrackComponent implements OnInit {
     $(document).ready(function(){
       $('#top').click( function(){
         $('#tracks').fadeIn(500);
+        $('#mine2').hide();
         $('#mine').hide();
       });
       $('#rec').click( function(){
         $('#tracks').hide();
+        $('#mine2').hide();
         $('#mine').fadeIn(500);
+      });
+      $('#dez').click( function(){
+        $('#tracks').hide();
+        $('#mine2').fadeIn(500);
+        $('#mine').hide();
       });
     });    
     this.spotifyService.getallTracks().subscribe((results:any) => {
@@ -35,5 +43,11 @@ export class TrackComponent implements OnInit {
       console.log(this.reccommendations)
     });
   }
+  getdeezerecs(formvals:any){
+    this.spotifyService.getdeezerRec(formvals.artist,formvals.songname).subscribe((results:any) => {
+      this.recos = results.songs;
+      console.log(this.recos)
+    });
   
+}
 }
