@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
-
-// Routing
+// Routing 
 import { AppRoutingModule } from './app-routing.module';
 
   // Components
@@ -23,7 +23,11 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { AlbumComponent } from './components/album/album.component';
 import { TrackComponent } from './components/track/track.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ApiserviceService } from './services/apiservice.service';
 import { FooterComponent } from './components/footer/footer.component';
+import { GenreComponent } from './components/genre/genre.component';
+import { ContactComponent } from './components/contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +42,10 @@ import { FooterComponent } from './components/footer/footer.component';
     ArtistComponent,
     AlbumComponent,
     TrackComponent,
-    FooterComponent
+    FooterComponent,
+    GenreComponent,
+    ContactComponent
+
   ],
   imports: [
     BrowserModule,
@@ -49,11 +56,12 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FlexLayoutModule,
-    HttpClientModule,
-    AngularMaterialModule,
+    
+
+
+
   ],
-  providers: [],
+  providers: [ApiserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

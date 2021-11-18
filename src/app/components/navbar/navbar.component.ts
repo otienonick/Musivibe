@@ -1,6 +1,8 @@
+
 import { UserService } from './../../services/user.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -29,14 +31,13 @@ export class NavbarComponent implements OnInit {
 
   }
 
-
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
   }
 
   ngOnInit(){
-    this.currentUser = true
 
+    this.currentUser = true
   }
 
 }
