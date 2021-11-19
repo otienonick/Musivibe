@@ -28,7 +28,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GenreComponent } from './components/genre/genre.component';
 import { ContactComponent } from './components/contact/contact.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +56,10 @@ import { ContactComponent } from './components/contact/contact.component';
     ReactiveFormsModule,
     HttpClientModule,
     
+
+    
+    
+
 
 
 
