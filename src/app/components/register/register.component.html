@@ -18,7 +18,7 @@
 
           <mat-form-field class="example-full-width">
             <mat-label>Enter your email</mat-label>
-              <input formControlName='email'  matInput placeholder="pat@example.com"  required>
+              <input formControlName='email'  matInput placeholder="pat@example.com" type="email"  required>
               <mat-error *ngIf='email.touched && email.errors'  class="errorMessage" style="font-size: 10px;color: #f44336;">
                 <span *ngIf="email.hasError('required')" >Email is required!</span>
                 <span *ngIf="email.hasError('email')" >Please provide a valid email</span>
