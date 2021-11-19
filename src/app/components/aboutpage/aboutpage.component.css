@@ -1,0 +1,79 @@
+/* ABOUT SECTION */
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Road+Rage&family=Roboto:wght@300&display=swap');
+
+.about{
+    background-image: url('https://images.unsplash.com/photo-1614149162883-504ce4d13909?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+}
+h1, h2,h5{
+    color:rgb(3, 3, 65);
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+ .container-fluid p{
+    color:rgb(3, 3, 65);
+
+}
+.container-fluid a{
+    font-weight: 700;
+}
+
+.container-fluid .fas{
+    font-size: 14rem;
+    color: #e91e63;
+}
+
+.btns a{
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #e91e63;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color:rgb(3, 3, 65);
+    
+}
+
+.btns a>.fas{
+    color: white;
+    font-size: 1.2rem;
+}
+  span{
+    background-color: #e91e63;
+    height: 100%;
+    width: 20%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    border-radius: 25px;
+    transition: .5s;
+    z-index: -1;
+}
+.btns a:hover span{
+    width: 100%;
+}
+.images p{
+    position: absolute;
+     height: 100%;
+      width: 100%; 
+      top:45%;
+      color:rgb(3, 3, 65);
+      font-size: 1.8rem;
+}
+
+.images{
+    position: relative;
+}
+.text-center img{
+    transition: all 0.3s ease;
+}
+
+.text-center img:hover{
+    filter: brightness(40%);
+    cursor: pointer;
+    transform: scale(1.05);
+
+
+}

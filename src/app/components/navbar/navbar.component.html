@@ -1,8 +1,10 @@
 
+
 <mat-toolbar >
 
     <div>
         <a class="nav_logo" routerLink="/home"> <span style="font-size: 40px;"><i class="fab fa-maxcdn"></i></span>usivibe</a>
+
     </div>
     <div fxFlex fxLayout fxLayoutAlign="end" style="margin-right: 100px;" fxHide.xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
@@ -14,13 +16,23 @@
             </li>
             <a class="v1" href="/"> </a>
 
-            <li>
+            <span  *ngIf="currentUser" class="text-white fs-2"> 
+               <a href=""> <i class="fas fa-user-circle"></i></a>
+               </span> 
+    <li *ngIf="currentUser">
+            <mat-select style="color: white;" [(value)]="selected">
+              <mat-option style="background: navy;" ><a routerLink="/contact">Profile</a> </mat-option>
+              <mat-option style="background: navy;" (click)="logout()"  value="option2"> <a routerLink="/login">logout</a></mat-option>
+            </mat-select>
+    </li>
+   
+
+            <li  *ngIf="currentUser == null" >
                 <a routerLink="/signup">Sign up</a>
             </li>
-            <li>
-                <a routerLink="/login">Log in</a>
+            <li   *ngIf="currentUser == null">
 
-            </li>
+                <a routerLink="/login">Log in</a>
 
         </ul>
     </div>
@@ -32,4 +44,5 @@
       </button>
   </div>
   </mat-toolbar>
+  
   
