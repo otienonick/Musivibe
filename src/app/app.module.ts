@@ -27,6 +27,7 @@ import { ApiserviceService } from './services/apiservice.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { GenreComponent } from './components/genre/genre.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ContactComponent } from './components/contact/contact.component';
     TrackComponent,
     FooterComponent,
     GenreComponent,
-    ContactComponent
+    ContactComponent,
+    ProfileComponent
 
   ],
   imports: [

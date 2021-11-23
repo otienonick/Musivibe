@@ -4,10 +4,10 @@
         <mat-card-title>Sign Up</mat-card-title>
       </mat-card-header>
   
-      <form [formGroup]='registerForm' (ngSubmit)='registerUser()'  class="example-form">
+      <form [formGroup]='registerForm'  class="example-form">
         <mat-card-content>
           <mat-form-field class="example-full-width">
-            <input   formControlName='username'  matInput placeholder="Username"  required>
+            <input   formControlName='username'  matInput placeholder="Username" type="text" required>
             <mat-error *ngIf='username.touched && username.errors' class="errorMessage" style="font-size: 10px; color: #f44336;">
               <span *ngIf="username.hasError('required')" >username is required!</span>
               <span *ngIf="username.hasError('maxlength')" >Only 10 characters allowed</span>
@@ -29,7 +29,7 @@
 
           <mat-form-field class="example-full-width">
             <mat-label>Enter your password</mat-label>
-              <input  formControlName='password'  matInput [type]="hide ? 'password' : 'text'"  required>
+              <input  formControlName='password'  matInput [type]="hide ? 'password' : 'text'" type="password" required>
               <mat-error *ngIf='password.touched && password.errors'  class="errorMessage" style="font-size: 10px; color: #f44336;">
                 <span *ngIf="password.hasError('required')" >Password is required!</span>
                 <span *ngIf="password.hasError('minlength')" >Password must have atleast 5 characters</span>
@@ -45,7 +45,7 @@
           </section>
         </mat-card-content>
   
-        <button type="submit" [disabled]='registerForm.invalid' mat-raised-button style="background: #e91e63; color: #fff;" class="btn-block">Register</button>
+        <button (click)='registerUser()' [disabled]='registerForm.invalid' mat-raised-button style="background: #e91e63; color: #fff;" class="btn-block">Register</button>
       </form>
       
       <div class="mt-3">

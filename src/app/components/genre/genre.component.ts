@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiserviceService } from 'src/app/services/apiservice.service';
 
 @Component({
   selector: 'app-genre',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./genre.component.css']
 })
 export class GenreComponent implements OnInit {
-
-  constructor() { }
+  genres: any[]=[];
+  constructor(private deezService:ApiserviceService) { }
 
   ngOnInit(): void {
+    this.deezService.getallGenre().subscribe((results:any) => {
+      this.genres = results.data;
+      this.genres=this.genres.splice(-8);
+      console.log(this.genres)
+    });
   }
 
 }

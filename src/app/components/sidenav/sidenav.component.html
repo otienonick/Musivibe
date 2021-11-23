@@ -15,8 +15,8 @@
             <a matline>Profile</a>
         </mat-list-item>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="onSidenavClose()">Profile</button>
-            <button mat-menu-item (click)="onSidenavClose()">Logout</button>
+            <button mat-menu-item routerLink="/profile" (click)="onSidenavClose()">Profile</button>
+            <button mat-menu-item routerLink="/login" (click)="onSidenavClose()">Logout</button>
         </mat-menu>
       </mat-nav-list>
       <hr>

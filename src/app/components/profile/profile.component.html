@@ -1,0 +1,53 @@
+
+<!-- <div class="main-div">
+    <mat-card class="card">
+        <mat-card-header>
+            <div mat-card-avatar>
+                <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="profimage" class="header-image">
+            </div>
+            <mat-card-title>Musivibe</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>Username: Musivibe</p>
+        </mat-card-content>
+    </mat-card>
+</div> -->
+
+<div class="container">
+    <div class="row align-items-center profile-header">
+        <div class="col-md-3 mb-3">
+            <img [src]="urllink" alt="profileimage" 
+            class="rounded-circle img-fluid profile-picture" style="height: 25vh;width: 25vh">
+            <input type="file" class="btn btn-secondary btn-sm" (change)="selectFiles($event)">
+        </div>
+        <div class="col-md text-md-left">
+            <h2>Musivibe</h2>
+            <p class="lead text-muted">Email : musivibe@gmail.com</p>
+        </div>        
+    </div>
+    <div class="row">
+
+    </div>
+    <div class="text-center mt-3">
+        <span> <a href="/profile#tracks">All</a></span>
+        <span>Top songs</span>
+        <span>Tracks</span>
+        <span>Playlist</span>
+    </div>
+    <div class="card-body" id="tracks">
+        <h1 class="text-center" style="color: black;">All Songs</h1>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let track of tracks">
+                <div class="card mt-3" style="border-color: navy;width: 100%;">
+                    <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);border-radius:30px ;">
+                        <div><img src="{{track.artist.picture_small}}" alt="" style="border-radius:50% ;"></div>
+                        <p class="lead">{{track.title}}</p>
+                        <audio controls style="width: 80%;">
+                            <source src="{{track.preview}}">
+                        </audio>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

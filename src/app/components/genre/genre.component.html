@@ -1,1 +1,16 @@
-<p>genre works!</p>
+<div class="container" style="padding: 2%;" ><a href="https://www.deezer.com/en/channels/explore"id="genre" style="color:white;font-size:large">Genres<i class="chevron right icon"></i></a></div>
+<div class="container-fluid">
+<div class="card-body" id="genres">          
+          <div class="row">
+              <div class="col-md-3" *ngFor="let genre of genres">  
+                <p class="lead text-center text-white" style="font-weight: 400;">{{genre.name}}</p>                           
+                  <div class="card mt-3" style="border-color: navy;width: 100%;">
+                      <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);border-radius:30px ;">
+                        <div><img src="{{genre.picture}}" alt="" style="border-radius:50% ;"></div>                                                 
+                      </div>
+                  </div>                 
+              </div>
+          </div>
+      </div>
+</div>
+      

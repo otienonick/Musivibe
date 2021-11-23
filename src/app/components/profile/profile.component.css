@@ -1,0 +1,11 @@
+span{
+    padding:3%;
+    
+}
+span:hover{
+    color: #E91E63;
+    text-decoration: underline;
+}
+.container{
+    background-color: rgb(238, 247, 248);
+}
